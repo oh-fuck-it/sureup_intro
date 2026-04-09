@@ -80,7 +80,7 @@ export function ScreenshotShowcaseLayout({ data }: ScreenshotShowcaseLayoutProps
             >
               <div
                 onClick={() => openLightbox(i)}
-                className={`relative rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-400 hover:-translate-y-1 cursor-pointer ${
+                className={`relative rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-400 hover:-translate-y-1 cursor-pointer ${
                   item.featured
                     ? 'bg-gradient-to-br from-blue-50/90 to-indigo-50/80 border-2 border-blue-400/40 shadow-[0_4px_32px_rgba(59,130,246,0.15),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_48px_rgba(59,130,246,0.2),0_4px_16px_rgba(0,0,0,0.06)]'
                     : 'bg-white/80 border border-white/60 shadow-[0_4px_24px_rgba(0,0,0,0.06),0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_40px_rgba(59,130,246,0.1),0_4px_16px_rgba(0,0,0,0.06)]'

@@ -21,6 +21,7 @@ export function ImageCarousel({
   const [direction, setDirection] = useState(1);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const resetRef = useRef(0); // bump to reset auto-rotation timer
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const goTo = useCallback(
     (idx: number) => {
@@ -43,14 +44,19 @@ export function ImageCarousel({
     resetRef.current += 1;
   }, [images.length]);
 
-  // Auto-rotation, resets when resetRef changes
+  // Auto-rotation: wait 1.5s after mount/reset before starting
   useEffect(() => {
     if (images.length <= 1) return;
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, interval);
-    return () => clearInterval(timer);
+    const delay = setTimeout(() => {
+      timerRef.current = setInterval(() => {
+        setDirection(1);
+        setCurrent((prev) => (prev + 1) % images.length);
+      }, interval);
+    }, 1000);
+    return () => {
+      clearTimeout(delay);
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [images.length, interval, resetRef.current]);
 

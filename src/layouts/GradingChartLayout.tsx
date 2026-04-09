@@ -195,7 +195,7 @@ export function GradingChartLayout({ data }: GradingChartLayoutProps) {
 
         {/* Right: rich dashboard */}
         <motion.div variants={fadeInRight} className="col-span-8 pl-2">
-          <div className="rounded-3xl bg-white/55 backdrop-blur-xl border border-white/50 shadow-lg shadow-slate-200/25 p-5 xl:p-6">
+          <div className="rounded-3xl bg-white/55 backdrop-blur-sm border border-white/50 shadow-lg shadow-slate-200/25 p-5 xl:p-6">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
               <div>
@@ -294,7 +294,7 @@ export function GradingChartLayout({ data }: GradingChartLayoutProps) {
           {data.subtitle && <p className="text-base text-slate-500/80 font-medium mb-5 leading-relaxed">{data.subtitle}</p>}
         </motion.div>
         <motion.div variants={fadeInRight}>
-          <div className="rounded-2xl bg-white/60 backdrop-blur-xl border border-white/50 shadow-lg p-5 text-center text-sm text-slate-500">
+          <div className="rounded-2xl bg-white/60 backdrop-blur-sm border border-white/50 shadow-lg p-5 text-center text-sm text-slate-500">
             图表请在桌面端查看以获得最佳体验
           </div>
         </motion.div>

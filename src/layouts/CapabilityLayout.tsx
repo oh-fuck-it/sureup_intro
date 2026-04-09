@@ -24,7 +24,7 @@ function GroupCard({ group, index }: { group: CapabilityGroup; index: number }) 
       <div
         className={cn(
           'h-full rounded-2xl overflow-hidden',
-          'bg-white/60 backdrop-blur-2xl',
+          'bg-white/60 backdrop-blur-sm',
           'border border-white/50',
           'shadow-[0_2px_20px_rgba(0,0,0,0.04),0_0.5px_3px_rgba(0,0,0,0.02)]',
           'ring-1 ring-black/[0.03]',

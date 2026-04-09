@@ -155,7 +155,7 @@ export function AiAssistantLayout({ data }: AiAssistantLayoutProps) {
               >
                 <div
                   onClick={() => openLightbox(i % gallery.length)}
-                  className="relative rounded-xl overflow-hidden bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_3px_20px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_10px_36px_rgba(59,130,246,0.1),0_3px_12px_rgba(0,0,0,0.05)] hover:-translate-y-0.5 cursor-pointer"
+                  className="relative rounded-xl overflow-hidden bg-white/80 backdrop-blur-sm border border-white/60 shadow-[0_3px_20px_rgba(0,0,0,0.05),0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-300 hover:shadow-[0_10px_36px_rgba(59,130,246,0.1),0_3px_12px_rgba(0,0,0,0.05)] hover:-translate-y-0.5 cursor-pointer"
                 >
                   {/* Screenshot */}
                   <div className="relative overflow-hidden">

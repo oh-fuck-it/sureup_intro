@@ -89,7 +89,7 @@ export function FeatureCardsLayout({ data }: FeatureCardsLayoutProps) {
               className="group relative"
             >
               <div
-                className={`relative h-full rounded-2xl overflow-hidden bg-white/85 backdrop-blur-xl border border-white/60 shadow-[0_4px_24px_rgba(0,0,0,0.05),0_1px_3px_rgba(0,0,0,0.03)] transition-all duration-400 hover:shadow-xl ${style.shadow} hover:-translate-y-1.5 p-6 lg:p-7`}
+                className={`relative h-full rounded-2xl overflow-hidden bg-white/85 backdrop-blur-sm border border-white/60 shadow-[0_4px_24px_rgba(0,0,0,0.05),0_1px_3px_rgba(0,0,0,0.03)] transition-all duration-400 hover:shadow-xl ${style.shadow} hover:-translate-y-1.5 p-6 lg:p-7`}
               >
                 {/* Top gradient accent */}
                 <div className={`absolute top-0 inset-x-0 h-1 bg-gradient-to-r ${style.gradient} opacity-80`} />

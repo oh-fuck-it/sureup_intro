@@ -76,7 +76,7 @@ export function ImageLightbox({ images, initialIndex = 0, onClose }: ImageLightb
 
           {/* Caption */}
           {caption && (
-            <div className="mt-4 px-6 py-2.5 rounded-full bg-white/90 backdrop-blur-xl shadow-lg">
+            <div className="mt-4 px-6 py-2.5 rounded-full bg-white/90 backdrop-blur-sm shadow-lg">
               <p className="text-sm font-medium text-slate-700">{caption}</p>
             </div>
           )}

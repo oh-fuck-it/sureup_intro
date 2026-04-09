@@ -3,6 +3,7 @@ import { cn } from '../lib/cn';
 
 interface AmbientOrbsProps {
   orbs?: OrbConfig[];
+  visible?: boolean;
 }
 
 const driftClasses = [
@@ -29,8 +30,8 @@ const orbGradients: Record<OrbColor, string> = {
   lime:    'radial-gradient(circle, #d9f99d 0%, #d9f99d88 35%, transparent 65%)',
 };
 
-export function AmbientOrbs({ orbs }: AmbientOrbsProps) {
-  if (!orbs?.length) return null;
+export function AmbientOrbs({ orbs, visible = true }: AmbientOrbsProps) {
+  if (!orbs?.length || !visible) return null;
 
   return (
     <>
@@ -47,7 +48,7 @@ export function AmbientOrbs({ orbs }: AmbientOrbsProps) {
             left: orb.left,
             right: orb.right,
             opacity: orb.opacity ?? 0.5,
-            filter: `blur(${orb.blur ?? 80}px)`,
+            filter: `blur(${orb.blur ?? 50}px)`,
             animationDelay: `${i * -3.5}s`,
           }}
         />

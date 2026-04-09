@@ -35,7 +35,7 @@ export function Slide({ data, index, children }: SlideProps) {
       data-slide-index={index}
       aria-label={data.title ?? `Slide ${index + 1}`}
     >
-      {data.orbs && <AmbientOrbs orbs={data.orbs} />}
+      {data.orbs && <AmbientOrbs orbs={data.orbs} visible={isInView} />}
 
       <motion.div
         ref={ref}
@@ -45,8 +45,8 @@ export function Slide({ data, index, children }: SlideProps) {
         className={cn(
           'relative z-10 h-full min-h-[100dvh]',
           'flex flex-col justify-center',
-          data.layout === 'cover' ? 'px-0' : 'px-5 sm:px-8 lg:px-16 xl:px-24',
-          data.layout === 'cover' ? 'py-0' : 'py-12 sm:py-16',
+          (data.layout === 'cover' || data.layout === 'contrast') ? 'px-0' : 'px-5 sm:px-8 lg:px-16 xl:px-24',
+          (data.layout === 'cover' || data.layout === 'contrast') ? 'py-0' : 'py-12 sm:py-16',
           isDark && 'text-white',
         )}
       >
