@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: #fafbfc;
+    color: #1e293b;
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background: rgba(59, 130, 246, 0.12);
+  }
+}
+
+@layer components {
+  /* ── Glassmorphism ────────────────────────────────── */
+  .glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(24px) saturate(1.2);
+    -webkit-backdrop-filter: blur(24px) saturate(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow:
+      0 8px 32px rgba(59, 130, 246, 0.06),
+      0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px) saturate(1.1);
+    -webkit-backdrop-filter: blur(16px) saturate(1.1);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+      0 4px 16px rgba(59, 130, 246, 0.04),
+      0 1px 2px rgba(0, 0, 0, 0.03);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(40px) saturate(1.3);
+    -webkit-backdrop-filter: blur(40px) saturate(1.3);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow:
+      0 12px 48px rgba(59, 130, 246, 0.08),
+      0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+
+  /* ── Gradient Text ────────────────────────────────── */
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-subtle {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-emerald {
+    background: linear-gradient(135deg, #10b981 0%, #0d9488 50%, #0891b2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Ambient Orbs ─────────────────────────────────── */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  /* ── Orb Colors ── pastel tones, wide gradient, element opacity controls */
+  .orb-blue {
+    background: radial-gradient(circle, #93c5fd 0%, #93c5fd88 35%, transparent 65%);
+  }
+  .orb-violet {
+    background: radial-gradient(circle, #c4b5fd 0%, #c4b5fd88 35%, transparent 65%);
+  }
+  .orb-cyan {
+    background: radial-gradient(circle, #a5f3fc 0%, #a5f3fc88 35%, transparent 65%);
+  }
+  .orb-indigo {
+    background: radial-gradient(circle, #a5b4fc 0%, #a5b4fc88 35%, transparent 65%);
+  }
+  .orb-rose {
+    background: radial-gradient(circle, #fda4af 0%, #fda4af88 35%, transparent 65%);
+  }
+  .orb-emerald {
+    background: radial-gradient(circle, #a7f3d0 0%, #a7f3d088 35%, transparent 65%);
+  }
+  .orb-amber {
+    background: radial-gradient(circle, #fde68a 0%, #fde68a88 35%, transparent 65%);
+  }
+  .orb-sky {
+    background: radial-gradient(circle, #bae6fd 0%, #bae6fd88 35%, transparent 65%);
+  }
+  .orb-fuchsia {
+    background: radial-gradient(circle, #f0abfc 0%, #f0abfc88 35%, transparent 65%);
+  }
+  .orb-teal {
+    background: radial-gradient(circle, #99f6e4 0%, #99f6e488 35%, transparent 65%);
+  }
+  .orb-orange {
+    background: radial-gradient(circle, #fed7aa 0%, #fed7aa88 35%, transparent 65%);
+  }
+  .orb-lime {
+    background: radial-gradient(circle, #d9f99d 0%, #d9f99d88 35%, transparent 65%);
+  }
+
+  /* ── Orb Drift Animations ───────────────────────── */
+  .orb-drift-1 {
+    animation: orbDrift1 20s ease-in-out infinite;
+  }
+  .orb-drift-2 {
+    animation: orbDrift2 25s ease-in-out infinite;
+  }
+  .orb-drift-3 {
+    animation: orbDrift3 22s ease-in-out infinite;
+  }
+  .orb-drift-4 {
+    animation: orbDrift4 28s ease-in-out infinite;
+  }
+  .orb-drift-5 {
+    animation: orbDrift5 24s ease-in-out infinite;
+  }
+}
+
+@keyframes orbDrift1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -20px) scale(1.05); }
+  50% { transform: translate(-15px, 25px) scale(0.97); }
+  75% { transform: translate(20px, 15px) scale(1.03); }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-25px, 15px) scale(1.04); }
+  50% { transform: translate(20px, -30px) scale(0.96); }
+  75% { transform: translate(-10px, -20px) scale(1.02); }
+}
+
+@keyframes orbDrift3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(20px, 25px) scale(1.06); }
+  66% { transform: translate(-25px, -15px) scale(0.95); }
+}
+
+@keyframes orbDrift4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  20% { transform: translate(-20px, -25px) scale(1.03); }
+  40% { transform: translate(15px, 10px) scale(0.98); }
+  60% { transform: translate(25px, -10px) scale(1.05); }
+  80% { transform: translate(-10px, 20px) scale(0.97); }
+}
+
+@keyframes orbDrift5 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  30% { transform: translate(15px, -20px) scale(1.04); }
+  60% { transform: translate(-20px, 15px) scale(0.96); }
+}
+
+/* ── Snap Scroll ──────────────────────────────────── */
+.slide-container {
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+}
+
+.slide-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  min-height: 100vh;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  overflow: clip;
+}
+
+/* ── Slide Backgrounds ── neutral base, orbs provide color ─ */
+.slide-bg-default {
+  background: #fafbfd;
+}
+
+.slide-bg-warm {
+  background: #fffcfa;
+}
+
+.slide-bg-deep {
+  background: linear-gradient(135deg, #0f172a 0%, #0c0f1a 50%, #131028 100%);
+}
+
+.slide-bg-mint {
+  background: #f9fefb;
+}
+
+.slide-bg-lavender {
+  background: #fbfaff;
+}
+
+.slide-bg-peach {
+  background: #fffcf9;
+}
+
+.slide-bg-ocean {
+  background: linear-gradient(135deg, #0a1525 0%, #0c1a30 50%, #0e1428 100%);
+}
+
+.slide-bg-sunset {
+  background: #fffbf7;
+}
+
+.slide-bg-frost {
+  background: #f8fbff;
+}
