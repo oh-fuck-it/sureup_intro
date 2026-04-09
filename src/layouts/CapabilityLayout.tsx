@@ -16,7 +16,7 @@ const groupAccents = [
 ];
 
 function GroupCard({ group, index }: { group: CapabilityGroup; index: number }) {
-  const accent = groupAccents[index % groupAccents.length];
+  const accent = groupAccents[index % groupAccents.length]!;
 
   return (
     <motion.div variants={staggerItem} className="h-full">

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { fadeInLeft, fadeInUp, fadeInRight, staggerItem } from '../hooks/useSlideAnimation';
+import { fadeInLeft, fadeInUp, staggerItem } from '../hooks/useSlideAnimation';
 import type { SlideData } from '../slides/types';
 
 interface PolicyLayoutProps {
@@ -92,7 +92,7 @@ export function PolicyLayout({ data }: PolicyLayoutProps) {
         {/* RIGHT — screenshot collage zone (7 cols) */}
         <div className="col-span-7 relative" style={{ minHeight: '70vh' }}>
           {images.map((item, i) => {
-            const s = docStyles[i % docStyles.length];
+            const s = docStyles[i % docStyles.length]!;
             return (
               <motion.div
                 key={i}
@@ -117,7 +117,7 @@ export function PolicyLayout({ data }: PolicyLayoutProps) {
                   transition={{
                     duration: 0.6,
                     delay: s.delay,
-                    ease: [0.25, 0.46, 0.45, 0.94],
+                    ease: [0.25, 0.46, 0.45, 0.94] as const,
                   }}
                   viewport={{ once: true, amount: 0.2 }}
                   className="relative"

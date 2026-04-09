@@ -17,7 +17,7 @@ const cardVariant = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] },
+    transition: { duration: 0.6, ease: [0.25, 1, 0.5, 1] as const },
   },
 };
 
@@ -81,7 +81,7 @@ export function FeatureCardsLayout({ data }: FeatureCardsLayoutProps) {
         className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-5"
       >
         {features.map((f, i) => {
-          const style = cardStyles[i % cardStyles.length];
+          const style = cardStyles[i % cardStyles.length]!;
           return (
             <motion.div
               key={i}
