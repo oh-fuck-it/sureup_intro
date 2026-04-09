@@ -59,12 +59,12 @@ function ScrollRow({
         {items.map((img, i) => (
           <div
             key={`${img.src}-${i}`}
-            className="flex-shrink-0 w-[240px] rounded-xl overflow-hidden shadow-[0_2px_16px_-4px_rgba(0,0,0,0.07)] ring-1 ring-black/[0.04] bg-white"
+            className="flex-shrink-0 w-[300px] rounded-xl overflow-hidden shadow-[0_2px_16px_-4px_rgba(0,0,0,0.07)] ring-1 ring-black/[0.04] bg-white"
           >
             <img
               src={img.src}
               alt={img.alt}
-              className="w-full h-[120px] object-cover object-top"
+              className="w-full h-[160px] object-cover object-top"
               loading="lazy"
             />
           </div>

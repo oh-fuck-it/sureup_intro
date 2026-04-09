@@ -9,7 +9,7 @@ interface ContrastLayoutProps {
 
 export function ContrastLayout({ data }: ContrastLayoutProps) {
   return (
-    <div className="flex flex-col items-center justify-center text-center w-full gap-6 sm:gap-8">
+    <div className="flex flex-col items-center justify-center text-center w-full gap-4 sm:gap-5">
       {/* ── Tagline label ── */}
       {data.subtitle && (
         <motion.p

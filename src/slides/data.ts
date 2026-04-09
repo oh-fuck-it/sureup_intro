@@ -24,7 +24,7 @@ export const slides: SlideData[] = [
     id: 'contrast-core',
     layout: 'contrast',
     bg: 'frost',
-    title: '一个系统，让教学和育人全面智能化',
+    title: '一个系统,让教学和育人全面智能化',
     subtitle: 'AI-POWERED CAMPUS',
     image: '/images/platform-preview.png',
     imageAlt: 'SureUp 平台预览',

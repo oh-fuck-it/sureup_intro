@@ -100,7 +100,7 @@ export function CTALayout({ data }: CTALayoutProps) {
         variants={fadeInUp}
         className="mt-3 text-xs text-slate-300/70 tracking-wide"
       >
-        © {new Date().getFullYear()} DelveTech · 稳了 校园智能教·评·管·育一体化平台
+        © {new Date().getFullYear()} 北京探渊科技有限公司
       </motion.p>
     </div>
   );
